@@ -9,7 +9,12 @@
 
     public class UserRepository: IUserRepository
     {
-        GameContext context = new GameContext();
+        readonly GameContext context = new GameContext();
+        
+        public UserRepository(GameContext context)
+        {
+            this.context = context;
+        }
 
         public IQueryable All
         {
@@ -25,7 +30,7 @@
             {
                 if (!context.Users.Any(x => x.Name == user.Name))
                 {
-                    context.Users.Add(new User() { Name = user.Name, Password = user.Password});
+                    context.Users.Add(user);
                 }
             }
             Save();

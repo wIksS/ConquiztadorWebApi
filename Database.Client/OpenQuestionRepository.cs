@@ -1,6 +1,7 @@
 ﻿namespace GameDb.Client
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     using Database.Models;
@@ -9,6 +10,11 @@
     public class OpenQuestionRepository: IOpenQuestionRepository
     {
         GameContext context = new GameContext();
+
+        public OpenQuestionRepository(GameContext context)
+        {
+            this.context = context;
+        }
 
         public IQueryable All
         {
@@ -24,6 +30,18 @@
             {
                 context.OpenQuestions.Add(new OpenQuestion() { Question = question});
 
+            }
+            Save();
+        }
+
+        public void InsertAll(IEnumerable<OpenQuestion> questions)
+        {
+            foreach(var question in questions)
+            {
+                if (!context.OpenQuestions.Any(x => x.Question == question.Question))
+                {
+                    context.OpenQuestions.Add(question);
+                }
             }
             Save();
         }

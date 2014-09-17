@@ -1,7 +1,5 @@
 ﻿namespace Database.Models
 {
-    using System;
-
     public class OpenQuestion
     {
         public int Id { get; set; }

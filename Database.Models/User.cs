@@ -1,8 +1,5 @@
 ﻿namespace Database.Models
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
-
     public class User
     {
         public int Id { get; set; }

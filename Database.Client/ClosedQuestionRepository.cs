@@ -5,10 +5,16 @@
 
     using Database.Models;
     using Database.Entities;
+    using System.Collections.Generic;
 
     public class ClosedQuestionRepository: IClosedQuestionRepository
     {
         GameContext context = new GameContext();
+
+        public ClosedQuestionRepository(GameContext context)
+        {
+            this.context = context;
+        }
 
         public IQueryable All
         {
@@ -28,15 +34,28 @@
             Save();
         }
 
-        public bool UpdateAnswers(string question, string[] answers, char correctAnswer)
+        public void InsertAll(IEnumerable<ClosedQuestion> questions)
+        {
+            foreach(var question in questions)
+            {
+                if (!context.ClosedQuestions.Any(x => x.Question == question.Question))
+                {
+                    context.ClosedQuestions.Add(question);
+                }
+            }
+            Save();
+        }
+
+        public bool UpdateAnswers(string question, string answersA,string answersB,string answersC,string answersD, string correctAnswer)
         {
             if (context.ClosedQuestions.Any(x => x.Question == question))
             {
                 var closedQuestion = context.ClosedQuestions.Find(question);
-                closedQuestion.AnswerA = answers[0];
-                closedQuestion.AnswerB = answers[1];
-                closedQuestion.AnswerC = answers[2];
-                closedQuestion.AnswerD = answers[3];
+                closedQuestion.Question = question;
+                closedQuestion.AnswerA = answersA;
+                closedQuestion.AnswerB = answersB;
+                closedQuestion.AnswerC = answersC;
+                closedQuestion.AnswerD = answersD;
                 closedQuestion.CorrectAnswer = correctAnswer;
                 Save();
                 return true;
