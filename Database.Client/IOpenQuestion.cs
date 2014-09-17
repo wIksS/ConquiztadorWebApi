@@ -2,13 +2,13 @@
 {
     using System.Linq;
 
-    public interface IOpenQuestionRepository
+    public interface IOpenQuestion
     {
         IQueryable All{ get; }
 
-        void InsertOrUpdate(string name, string text);
+        void Insert(string name);
 
-        bool Delete(string Id);
+        bool Delete(string name);
 
         void Save();
     }

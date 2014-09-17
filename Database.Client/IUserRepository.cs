@@ -6,7 +6,7 @@
     {
         IQueryable All{ get; }
 
-        void InsertOrUpdate(string name, string password, int result);
+        void Insert(string name);
 
         bool Delete(string name);
 

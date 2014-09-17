@@ -14,15 +14,15 @@
         {
             get
             {
-                return context.Users;
+                return context.OpenQuestions;
             }
         }
 
         public void Insert(string name)
         {
-            if (!context.Users.Any(x => x.Name == name))
+            if (!context.OpenQuestions.Any(x => x.Question == name))
             {
-                context.Users.Add(new User() { Name = name});
+                context.OpenQuestions.Add(new OpenQuestion() { Question = name});
 
             }
             Save();
@@ -30,10 +30,10 @@
 
         public bool Delete(string name)
         {
-            if (context.Users.Any(x => x.Name == name))
+            if (context.OpenQuestions.Any(x => x.Question == name))
             {
-                var user = context.Users.Find(name);
-                context.Users.Remove(user);
+                var openQuestion = context.OpenQuestions.Find(name);
+                context.OpenQuestions.Remove(openQuestion);
                 Save();
                 return true;
             }
