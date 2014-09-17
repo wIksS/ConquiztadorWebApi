@@ -1,2 +1,5 @@
 [{"Question":"Who is Pesho's best fried?", "AnswerA":"Dimitar", "AnswerB":"Gosho", "AnswerC":"Ivan", "AnswerD":"Stilian","CorrectAnswer":"B"},
-{"Question":"What is Ivailo Kenov's favourite animal?", "AnswerA":"Bunny", "AnswerB":"Wolf", "AnswerC":"Lion", "AnswerD":"Cow","CorrectAnswer":"A"}]
+{"Question":"What is Ivailo Kenov's favourite animal?", "AnswerA":"Bunny", "AnswerB":"Wolf", "AnswerC":"Lion", "AnswerD":"Cow","CorrectAnswer":"A"},
+{"Question":"What was the maximal possible result on the Databases Test in Telerik Academy?", "AnswerA":"500", "AnswerB":"200", "AnswerC":"100", "AnswerD":"50","CorrectAnswer":"C"},
+{"Question":"At what time the lectures in Telerik starts in the morning", "AnswerA":"8.00", "AnswerB":"9.00", "AnswerC":"10.00", "AnswerD":"10.20","CorrectAnswer":"D"},
+{"Question":"How much money does the promotion Caffee + Orange fresh in the cafeteria cost?", "AnswerA":"3", "AnswerB":"4", "AnswerC":"2", "AnswerD":"55","CorrectAnswer":"A"}]
