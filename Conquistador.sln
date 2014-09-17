@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{643A8081-8B3B-422E-BBD6-9C506CF29A0C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameDb", "GameDb", "{643A8081-8B3B-422E-BBD6-9C506CF29A0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database.Models", "Database.Models\Database.Models.csproj", "{B636B297-6C04-4750-9D99-246505039B12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDb.Models", "Database.Models\GameDb.Models.csproj", "{B636B297-6C04-4750-9D99-246505039B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database.Client", "Database.Client\Database.Client.csproj", "{8E18B840-CC11-4CC1-8945-5C58A09CB353}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDb.Client", "Database.Client\GameDb.Client.csproj", "{8E18B840-CC11-4CC1-8945-5C58A09CB353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database.Entities", "Database.Entities\Database.Entities.csproj", "{0EDC7319-7E50-47C4-BB5D-539202348692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDb.Entities", "Database.Entities\GameDb.Entities.csproj", "{0EDC7319-7E50-47C4-BB5D-539202348692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

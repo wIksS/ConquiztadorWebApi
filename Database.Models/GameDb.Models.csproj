@@ -7,8 +7,8 @@
     <ProjectGuid>{B636B297-6C04-4750-9D99-246505039B12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Database.Models</RootNamespace>
-    <AssemblyName>Database.Models</AssemblyName>
+    <RootNamespace>GameDb.Models</RootNamespace>
+    <AssemblyName>GameDb.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

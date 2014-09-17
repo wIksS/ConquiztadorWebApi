@@ -1,4 +1,4 @@
-﻿namespace Database.Client
+﻿namespace GameDb.Client
 {
     using System.Linq;
 
