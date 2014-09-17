@@ -57,15 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameContext.cs" />
-    <Compile Include="Repositories\ClosedQuestionRepository.cs" />
-    <Compile Include="Repositories\IClosedQuestionRepository.cs" />
-    <Compile Include="Repositories\IOpenQuestionRepository.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="IGameContext.cs" />
+    <Compile Include="Repositories\GameData.cs" />
+    <Compile Include="RepositoriesOld\ClosedQuestionRepository.cs" />
+    <Compile Include="RepositoriesOld\IClosedQuestionRepository.cs" />
+    <Compile Include="RepositoriesOld\IOpenQuestionRepository.cs" />
+    <Compile Include="RepositoriesOld\IRepository.cs" />
+    <Compile Include="RepositoriesOld\IUserRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Repositories\OpenQuestionRepository.cs" />
+    <Compile Include="RepositoriesOld\OpenQuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="RepositoriesOld\UserRepository.cs" />
+    <Compile Include="Repositories\IGameData.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

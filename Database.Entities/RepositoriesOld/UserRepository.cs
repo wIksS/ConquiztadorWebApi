@@ -1,4 +1,4 @@
-﻿namespace GameDb.Entities.Repositories
+﻿namespace GameDb.Entities.RepositoriesOld
 {
     using System;
     using System.Linq;

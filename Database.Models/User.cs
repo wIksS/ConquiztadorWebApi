@@ -8,13 +8,6 @@ using System.Threading.Tasks;
 
     public class User : IdentityUser
     {
-        private ICollection<Game> games;
-
-        public User()
-        {
-            this.games = new HashSet<Game>();
-        }
-
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -24,18 +17,5 @@ using System.Threading.Tasks;
         }
 
         public int Result { get; set; }
-
-        public virtual ICollection<Game> Games
-        {
-            get
-            {
-                return this.games;
-            }
-
-            set
-            {
-                this.games = value;
-            }
-        }
     }
 }

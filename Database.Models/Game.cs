@@ -5,10 +5,13 @@
 
     public class Game
     {
+        private const int ROWS = 4;
+        private const int COLS = 6;
+
         public Game()
         {
             this.Id = Guid.NewGuid();
-            this.Map = new byte[4, 6];
+            this.Map = new byte[ROWS, COLS];
             this.State = GameState.WaitingForSecondPlayer;
         }
 

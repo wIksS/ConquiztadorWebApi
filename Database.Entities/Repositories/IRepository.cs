@@ -1,15 +1,20 @@
 ﻿namespace GameDb.Entities.Repositories
 {
+    using System;
     using System.Linq;
 
-    public interface IRepository
+    public interface IRepository<T> where T : class
     {
-        IQueryable All{ get; }
+        IQueryable<T> All();
 
-        void Insert(string name);
+        T GetById(object id);
 
-        bool Delete(string name);
+        void Add(T entity);
 
-        void Save();
+        void Update(T entity);
+
+        void Delete(T entity);
+
+        void SaveChanges();
     }
 }

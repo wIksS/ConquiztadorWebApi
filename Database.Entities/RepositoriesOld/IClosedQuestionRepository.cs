@@ -1,4 +1,4 @@
-﻿namespace GameDb.Entities.Repositories
+﻿namespace GameDb.Entities.RepositoriesOld
 {
     using GameDb.Models;
     using System.Collections.Generic;

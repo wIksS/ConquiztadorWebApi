@@ -5,7 +5,7 @@
     using Microsoft.AspNet.Identity.EntityFramework;
     using System.Data.Entity;
 
-    public class GameContext : IdentityDbContext<User>
+    public class GameContext : IdentityDbContext<User>, IGameContext
     {
         public GameContext()
             : base("GameContext", throwIfV1Schema: false)
@@ -18,11 +18,19 @@
             return new GameContext();
         }
 
-
-
         public DbSet<ClosedQuestion> ClosedQuestions { get; set; }
 
         public DbSet<OpenQuestion> OpenQuestions { get; set; }
 
+
+        public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
+        }
+
+        public void SaveChanges()
+        {
+            base.SaveChanges();
+        }
     }
 }
