@@ -5,9 +5,9 @@
 
     using GameDb.Models;
 
-    public interface IUserRepository : IRepository
+    public interface IUserRepository : IRepository<User>
     {
-        IQueryable All{ get; }
+        IQueryable<User> All{ get; }
 
         bool UpdateResult(string name, int result);
 

@@ -16,7 +16,7 @@
             this.context = context;
         }
 
-        public IQueryable All
+        public IQueryable<ClosedQuestion> All
         {
             get
             {

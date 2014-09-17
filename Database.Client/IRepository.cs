@@ -2,9 +2,9 @@
 {
     using System.Linq;
 
-    public interface IRepository
+    public interface IRepository <T>
     {
-        IQueryable All{ get; }
+        IQueryable<T> All{ get; }
 
         void Insert(string name);
 

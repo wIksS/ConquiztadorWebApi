@@ -5,9 +5,9 @@
 
     using GameDb.Models;
 
-    public interface IOpenQuestionRepository : IRepository
+    public interface IOpenQuestionRepository : IRepository<OpenQuestion>
     {
-        IQueryable All{ get; }
+        IQueryable<OpenQuestion> All{ get; }
 
         void Insert(string name);
 

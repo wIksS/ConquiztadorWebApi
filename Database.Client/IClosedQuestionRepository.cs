@@ -5,9 +5,9 @@
     
     using GameDb.Models;
 
-    public interface IClosedQuestionRepository : IRepository
+    public interface IClosedQuestionRepository : IRepository<ClosedQuestion>
     {
-        IQueryable All{ get; }
+        IQueryable<ClosedQuestion> All{ get; }
 
         bool UpdateAnswers(string question, string answersA, string answersB,string answersC,string answersD,string correctAnswer);
 
