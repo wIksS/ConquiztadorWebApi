@@ -18,14 +18,26 @@
             }
         }
 
-        public void Insert(string name)
+        public void Insert(string question)
         {
-            if (!context.OpenQuestions.Any(x => x.Question == name))
+            if (!context.OpenQuestions.Any(x => x.Question == question))
             {
-                context.OpenQuestions.Add(new OpenQuestion() { Question = name});
+                context.OpenQuestions.Add(new OpenQuestion() { Question = question});
 
             }
             Save();
+        }
+
+        public bool UpdateAnswers(string question, int answer)
+        {
+            if (context.OpenQuestions.Any(x => x.Question == question))
+            {
+                var openQuestion = context.OpenQuestions.Find(question);
+                openQuestion.CorrectAnswer = answer;
+                Save();
+                return true;
+            }
+            return false;
         }
 
         public bool Delete(string name)

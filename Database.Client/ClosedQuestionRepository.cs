@@ -28,6 +28,22 @@
             Save();
         }
 
+        public bool UpdateAnswers(string question, string[] answers, char correctAnswer)
+        {
+            if (context.ClosedQuestions.Any(x => x.Question == question))
+            {
+                var closedQuestion = context.ClosedQuestions.Find(question);
+                closedQuestion.AnswerA = answers[0];
+                closedQuestion.AnswerB = answers[1];
+                closedQuestion.AnswerC = answers[2];
+                closedQuestion.AnswerD = answers[3];
+                closedQuestion.CorrectAnswer = correctAnswer;
+                Save();
+                return true;
+            }
+            return false;
+        }
+
         public bool Delete(string name)
         {
             if (context.ClosedQuestions.Any(x => x.Question == name))

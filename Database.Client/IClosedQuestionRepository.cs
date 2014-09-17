@@ -6,6 +6,8 @@
     {
         IQueryable All{ get; }
 
+        bool UpdateAnswers(string question, string[] answers, char correctAnswer);
+
         void Insert(string name);
 
         bool Delete(string name);
