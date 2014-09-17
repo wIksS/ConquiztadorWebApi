@@ -3,7 +3,7 @@
     using System.Linq;
     using System.Collections.Generic;
     
-    using Database.Models;
+    using GameDb.Models;
 
     public interface IClosedQuestionRepository : IRepository
     {

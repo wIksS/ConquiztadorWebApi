@@ -1,4 +1,4 @@
-﻿namespace Database.Models
+﻿namespace GameDb.Models
 {
     public class OpenQuestion
     {

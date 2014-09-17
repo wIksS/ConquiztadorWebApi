@@ -1,4 +1,4 @@
-namespace Database.Entities.Migrations
+namespace GameDb.Entities.Migrations
 {
     using System;
     using System.Data.Entity;

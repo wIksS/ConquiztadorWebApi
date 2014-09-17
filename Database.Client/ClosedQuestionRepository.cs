@@ -3,8 +3,8 @@
     using System;
     using System.Linq;
 
-    using Database.Models;
-    using Database.Entities;
+    using GameDb.Models;
+    using GameDb.Entities;
     using System.Collections.Generic;
 
     public class ClosedQuestionRepository: IClosedQuestionRepository

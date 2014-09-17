@@ -5,8 +5,8 @@
     using System.Linq;
     using System.Collections.Generic;
 
-    using Database.Entities;
-    using Database.Models;
+    using GameDb.Entities;
+    using GameDb.Models;
     using Newtonsoft.Json;
 
     class ConsoleCilent

@@ -4,8 +4,8 @@
     using System.Linq;
     using System.Collections.Generic;
 
-    using Database.Models;
-    using Database.Entities;
+    using GameDb.Models;
+    using GameDb.Entities;
 
     public class UserRepository: IUserRepository
     {
