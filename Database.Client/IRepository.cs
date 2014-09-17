@@ -2,7 +2,7 @@
 {
     using System.Linq;
 
-    public interface IOpenQuestion
+    public interface IRepository
     {
         IQueryable All{ get; }
 

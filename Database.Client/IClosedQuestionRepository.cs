@@ -2,7 +2,7 @@
 {
     using System.Linq;
 
-    public interface IUserRepository : IRepository
+    public interface IClosedQuestionRepository : IRepository
     {
         IQueryable All{ get; }
 

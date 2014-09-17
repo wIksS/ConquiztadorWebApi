@@ -6,7 +6,7 @@
     using Database.Models;
     using Database.Entities;
 
-    public class OpenQuestionRepository: IOpenQuestionRepository
+    public class ClosedQuestionRepository: IClosedQuestionRepository
     {
         GameContext context = new GameContext();
 
@@ -14,15 +14,15 @@
         {
             get
             {
-                return context.OpenQuestions;
+                return context.ClosedQuestions;
             }
         }
 
         public void Insert(string name)
         {
-            if (!context.OpenQuestions.Any(x => x.Question == name))
+            if (!context.ClosedQuestions.Any(x => x.Question == name))
             {
-                context.OpenQuestions.Add(new OpenQuestion() { Question = name});
+                context.ClosedQuestions.Add(new ClosedQuestion() { Question = name});
 
             }
             Save();
@@ -30,10 +30,10 @@
 
         public bool Delete(string name)
         {
-            if (context.OpenQuestions.Any(x => x.Question == name))
+            if (context.ClosedQuestions.Any(x => x.Question == name))
             {
-                var openQuestion = context.OpenQuestions.Find(name);
-                context.OpenQuestions.Remove(openQuestion);
+                var closedQuestion = context.ClosedQuestions.Find(name);
+                context.ClosedQuestions.Remove(closedQuestion);
                 Save();
                 return true;
             }

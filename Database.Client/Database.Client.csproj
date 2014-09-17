@@ -49,8 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClosedQuestionRepository.cs" />
     <Compile Include="ConsoleCilent.cs" />
-    <Compile Include="IOpenQuestion.cs" />
+    <Compile Include="IClosedQuestionRepository.cs" />
+    <Compile Include="IOpenQuestionRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="OpenQuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
